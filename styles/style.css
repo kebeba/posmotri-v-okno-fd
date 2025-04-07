@@ -88,6 +88,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -100,7 +101,7 @@ ol {
   border: none;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
 .search-form__fieldset-title {
@@ -129,7 +130,7 @@ ol {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   color: #fff;
-  line-height: 130%;
+  line-height: 100%;
   appearance: none;
   padding-left: 0;
 }
@@ -157,6 +158,7 @@ ol {
 }
 
 .button {
+  appearance: none;
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff;
@@ -164,11 +166,11 @@ ol {
   font-weight: 700;
   font-size: 18px;
   cursor: pointer;
+  height: 34px;
 }
 
 .search-form__submit-button {
-  width: 194px;
-  height: 35px;
+  min-width: 194px;
   align-self: end;
 }
 
@@ -179,7 +181,7 @@ ol {
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 94%;
@@ -192,9 +194,9 @@ ol {
 
 .content__list-container {
   height: 298px;
-  overflow-y: scroll;
-  margin-top: 26px;
-  padding: 2px 2px;
+  overflow-y: auto;
+  margin-top: 21px;
+  padding: 3px 2px;
   position: relative;
 }
 
@@ -222,7 +224,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   text-transform: uppercase;
   text-overflow: ellipsis;
@@ -254,7 +256,6 @@ ol {
 .more-button {
   margin-top: 30px;
   width: 100%;
-  height: 35px;
 }
 
 .search-form__textfield:focus {
@@ -278,6 +279,14 @@ ol {
   text-decoration: underline;
 }
 
+.search-form__checkbox:active + .search-form__pseudo-checkbox::after {
+  background-color: #fff;
+}
+
+.search-form__label:has(.search-form__checkbox:active) {
+  text-decoration: none;
+}
+
 .search-form__textfield:active {
   border-color: #fff;
 }
@@ -297,6 +306,7 @@ ol {
 
 .button:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -321,4 +331,5 @@ ol {
 
 .content__card-link:active {
   background-color: #545050;
+  text-decoration: none;
 }
