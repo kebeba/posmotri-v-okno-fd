@@ -184,7 +184,6 @@ ol {
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
-  padding-bottom: 25px;
 }
 
 .content__accent {
@@ -194,7 +193,8 @@ ol {
 .content__list-container {
   height: 298px;
   overflow-y: scroll;
-  margin: 2px;
+  margin-top: 26px;
+  padding: 2px 2px;
   position: relative;
 }
 
